@@ -15,7 +15,7 @@ bool balancedbracket(string s){
             else stk.push(s[i]);
         }
      }
-    
+        
     
     if(stk.empty()) return true; 
     else return false;
