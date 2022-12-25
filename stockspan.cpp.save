@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+vector<int> stockspan(vector<int> v){
+     stack<int> stk;
+     vector<int> vec;
+     stk.push(0);
+     vec.push_back(1);
+
+     for(int i=1; i<v.size(); i++){
+        while(stk.size()>0 && v[i]>v[stk.top()]){
+            stk.pop();
+        }
+
+        if(stk.empty()){
+            vec.push_back(i+1);
+        }
+        else  vec.push_back(stk.top()-i);
+
+
+     stk.push(i);
+     }
+
+     }
+
+int main(){
+    vector<int> v = {2,5,9,3,1,12,6,8,7};
+    stockspan(v);
+    for(int i=0; i<v.size(); i++){
+        cout << v[i] << endl;
+    }
+    return 0;
+}

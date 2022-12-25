@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int area(int array){
+     stack<int> stk;
+     vector<int> vec;
+     int area = 0;
+}
+int main(){
+    int arr = {6, 2, 5, 4, 5, 1, 6};
+    area(arr);
+    cout << area;
+    return 0;
+}
